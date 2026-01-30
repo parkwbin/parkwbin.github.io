@@ -1,41 +1,263 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Your Name</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      max-width: 750px;
-      margin: 60px auto;
-      padding: 0 20px;
-      line-height: 1.6;
-      color: #222;
-    }
-    h1 { margin-bottom: 0.2em; }
-    a { color: #0366d6; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Researcher</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&family=Karla:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Karla', sans-serif;
+            background: #fafaf8;
+            color: #2a2a2a;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+        }
+
+        header {
+            margin-bottom: 4rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        h1 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #1a1a1a;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .bio {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+
+        .links {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .links a {
+            color: #2a2a2a;
+            text-decoration: none;
+            font-size: 0.95rem;
+            position: relative;
+            transition: color 0.2s ease;
+        }
+
+        .links a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: #2a2a2a;
+            transition: opacity 0.2s ease;
+        }
+
+        .links a:hover {
+            color: #666;
+        }
+
+        .links a:hover::after {
+            opacity: 0.5;
+        }
+
+        section {
+            margin-bottom: 3.5rem;
+        }
+
+        h2 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: #1a1a1a;
+        }
+
+        .publication {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .publication::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.6rem;
+            width: 4px;
+            height: 4px;
+            background: #2a2a2a;
+            border-radius: 50%;
+        }
+
+        .publication-title {
+            font-weight: 500;
+            margin-bottom: 0.3rem;
+        }
+
+        .publication-details {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .publication-link {
+            color: #2a2a2a;
+            text-decoration: none;
+            border-bottom: 1px solid #d0d0d0;
+            transition: border-color 0.2s ease;
+        }
+
+        .publication-link:hover {
+            border-bottom-color: #2a2a2a;
+        }
+
+        .interests {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .interest-tag {
+            padding: 0.4rem 1rem;
+            background: #f0f0f0;
+            font-size: 0.9rem;
+            color: #555;
+            border-radius: 2px;
+        }
+
+        footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e0e0e0;
+            font-size: 0.85rem;
+            color: #999;
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 3rem 1.5rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <header>
+            <h1>Your Name</h1>
+            <p class="subtitle">PhD Student in Computer Science</p>
+            <p class="bio">
+                I am a researcher working at the intersection of machine learning and computational biology. 
+                My work focuses on developing novel algorithms for understanding complex biological systems.
+            </p>
+            <div class="links">
+                <a href="mailto:your.email@university.edu">Email</a>
+                <a href="https://scholar.google.com/citations?user=YOUR_ID">Google Scholar</a>
+                <a href="https://github.com/yourusername">GitHub</a>
+                <a href="cv.pdf">CV</a>
+            </div>
+        </header>
 
-<h1>Your Name</h1>
-<p>
-PhD student in <b>Your Field</b><br>
-Department of X, Your University
-</p>
+        <section>
+            <h2>Research Interests</h2>
+            <div class="interests">
+                <span class="interest-tag">Machine Learning</span>
+                <span class="interest-tag">Computational Biology</span>
+                <span class="interest-tag">Deep Learning</span>
+                <span class="interest-tag">Bioinformatics</span>
+            </div>
+        </section>
 
-<p>
-Research interests: topic A, topic B, topic C.
-</p>
+        <section>
+            <h2>Selected Publications</h2>
+            
+            <div class="publication">
+                <div class="publication-title">Understanding Neural Network Dynamics in Biological Systems</div>
+                <div class="publication-details">
+                    <strong>Your Name</strong>, Co-Author Name<br>
+                    <em>Nature Machine Intelligence</em>, 2024<br>
+                    <a href="#" class="publication-link">Paper</a> · <a href="#" class="publication-link">Code</a>
+                </div>
+            </div>
 
-<p>
-<a href="cv.pdf">CV</a> ·
-<a href="https://scholar.google.com/">Google Scholar</a> ·
-<a href="https://github.com/YOURUSERNAME">GitHub</a> ·
-<a href="mailto:you@university.edu">Email</a>
-</p>
+            <div class="publication">
+                <div class="publication-title">A Novel Approach to Protein Structure Prediction</div>
+                <div class="publication-details">
+                    Co-Author Name, <strong>Your Name</strong>, Another Author<br>
+                    <em>NeurIPS</em>, 2023<br>
+                    <a href="#" class="publication-link">Paper</a> · <a href="#" class="publication-link">Code</a>
+                </div>
+            </div>
 
+            <div class="publication">
+                <div class="publication-title">Scalable Methods for Large-Scale Genomic Analysis</div>
+                <div class="publication-details">
+                    <strong>Your Name</strong>, Collaborator Name<br>
+                    <em>Bioinformatics</em>, 2023<br>
+                    <a href="#" class="publication-link">Paper</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>News</h2>
+            
+            <div class="publication">
+                <div class="publication-details">
+                    <strong>January 2024:</strong> Paper accepted to Nature Machine Intelligence
+                </div>
+            </div>
+
+            <div class="publication">
+                <div class="publication-details">
+                    <strong>September 2023:</strong> Presented at NeurIPS 2023 in New Orleans
+                </div>
+            </div>
+
+            <div class="publication">
+                <div class="publication-details">
+                    <strong>June 2023:</strong> Started summer research internship at Research Lab
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            Last updated: January 2024
+        </footer>
+    </div>
 </body>
 </html>
